@@ -47,3 +47,10 @@ let milk = new PerishableProductProperties("milk", 1.50, 10, "2024-12-31");
 
 console.log(milk.toString());
 console.log(milk.getTotalValue());
+
+//creating another object since specified 2 minimum of child class
+
+let egg = new PerishableProductProperties("egg", 0.50, 12, "2025-12-31");
+
+console.log(egg.toString());
+console.log(egg.getTotalValue());
