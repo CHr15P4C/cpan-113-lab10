@@ -29,8 +29,16 @@ console.log(apple.toString());
 //adding sub class perishable product
 
 class PerishableProductProperties extends ProductProperties {
+    //extending constructor from super class
     constructor(name, price, quantity, expirationDate) {
         super(name, price, quantity);
         this.expirationDate = expirationDate;
     }
+    //overiding method from superclass
+    toString() {
+        return "Product: " + this.name + ", Price: " + this.price + ", Quantity: " + this.quantity + ", Expiration Date: " + this.expirationDate;
+    }
+
 }
+
+//creating two methods to test
