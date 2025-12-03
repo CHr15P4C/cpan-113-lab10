@@ -65,3 +65,20 @@ console.log(bean.getTotalValue());
 
 console.log(steak.toString());
 console.log(steak.getTotalValue());
+
+//static methods and properties
+//class product
+
+class Product {
+    static applyDiscount(products, discount){
+
+        for (const product of products){
+            product.price = product.price * (1-discount);
+        }
+    }
+}
+
+//this is confusing without having created a store class first to test with smh
+
+//store class
+
