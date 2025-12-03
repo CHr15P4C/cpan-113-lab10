@@ -18,12 +18,11 @@ class ProductProperties {
     }
 }
 
-//object to test
 
-let apple = new ProductProperties("apple", 2.50, 50);
 
-console.log(apple.getTotalValue());
-console.log(apple.toString());
+
+
+
 
 
 //adding sub class perishable product
@@ -41,30 +40,10 @@ class PerishableProductProperties extends ProductProperties {
 
 }
 
-//creating two methods to test
 
-let milk = new PerishableProductProperties("milk", 1.50, 10, "2024-12-31");
 
-console.log(milk.toString());
-console.log(milk.getTotalValue());
 
-//creating another object since specified 2 minimum of child class
 
-let egg = new PerishableProductProperties("egg", 0.50, 12, "2025-12-31");
-
-console.log(egg.toString());
-console.log(egg.getTotalValue());
-
-//adding 2 more of non expiring
-
-let bean = new ProductProperties("bean", 0.10, 100);
-let steak = new ProductProperties("steak", 60.99, 1);
-
-console.log(bean.toString());
-console.log(bean.getTotalValue());
-
-console.log(steak.toString());
-console.log(steak.getTotalValue());
 
 //static methods and properties
 //class product
@@ -110,31 +89,32 @@ class Store {
 }
 
 ////testing time
+//adding 3 nonperishable
+let apple = new ProductProperties("apple", 2.50, 50);
+let bean = new ProductProperties("bean", 0.10, 100);
+let steak = new ProductProperties("steak", 60.99, 1);
+//2 perishable
+let milk = new PerishableProductProperties("milk", 1.50, 10, "2024-12-31");
+let egg = new PerishableProductProperties("egg", 0.50, 12, "2025-12-31");
 
-//make a story
-
+//make a store
 let longos = new Store();
-
+//adding the products to the store
 longos.addProduct(milk);
 longos.addProduct(egg);
 longos.addProduct(bean);
 longos.addProduct(steak);
 longos.addProduct(apple);
-
+//doing the testing
 console.log("testing the system now...............................");
-
-
-
+//full vlaue
 console.log("total longos value: " + longos.getInventoryvalue());
-
+//apply discount
 Product.applyDiscount(longos.inventory, 0.15);
-
+//value after discount
 console.log("longos value after 15% discount: " + longos.getInventoryvalue());
-
+//test finding existing product and non existing one
 console.log("finding apple");
-
 console.log(longos.findProductByName("apple"));
-
 console.log("finding bingus");
-
 console.log(longos.findProductByName("bingus"));
