@@ -82,3 +82,28 @@ class Product {
 
 //store class
 
+class Store {
+    constructor() {
+        this.inventory = new Array();
+    } 
+
+    addProduct(product) {
+         this.inventory.push(product);//haha pushing p
+    }
+
+    getInventoryvalue() {
+        let total = 0;
+        for (const product of this.inventory) {            
+             total += product.getTotalValue;
+        }
+        return total;
+    }
+
+    findProductByName(name) {
+        for (const product of this.inventory) {
+            if (product.name = name) {
+                return product.toString();
+            } else {return null;}
+        }
+    }
+}
