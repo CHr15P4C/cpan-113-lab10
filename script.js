@@ -42,3 +42,8 @@ class PerishableProductProperties extends ProductProperties {
 }
 
 //creating two methods to test
+
+let milk = new PerishableProductProperties("milk", 1.50, 10, "2024-12-31");
+
+console.log(milk.toString());
+console.log(milk.getTotalValue());
