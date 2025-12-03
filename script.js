@@ -54,3 +54,14 @@ let egg = new PerishableProductProperties("egg", 0.50, 12, "2025-12-31");
 
 console.log(egg.toString());
 console.log(egg.getTotalValue());
+
+//adding 2 more of non expiring
+
+let bean = new ProductProperties("bean", 0.10, 100);
+let steak = new ProductProperties("steak", 60.99, 1);
+
+console.log(bean.toString());
+console.log(bean.getTotalValue());
+
+console.log(steak.toString());
+console.log(steak.getTotalValue());
