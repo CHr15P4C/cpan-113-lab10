@@ -13,6 +13,14 @@ class ProductProperties {
         return (this.price*this.quantity);
     }
     toString() {
-        return ("Product: " + this.name + ", Price: ", + this.price + ",Quantity: " + this.quantity);
+         
+        return "Product: " + this.name + ", Price: " + this.price + ", Quantity: " + this.quantity;
     }
 }
+
+//object to test
+
+let apple = new ProductProperties("apple", 2.50, 50);
+
+console.log(apple.getTotalValue());
+console.log(apple.toString());
