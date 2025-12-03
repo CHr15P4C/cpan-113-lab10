@@ -94,16 +94,47 @@ class Store {
     getInventoryvalue() {
         let total = 0;
         for (const product of this.inventory) {            
-             total += product.getTotalValue;
+             total += product.getTotalValue();
         }
         return total;
     }
 
-    findProductByName(name) {
+    findProductByName(nameIn) {
         for (const product of this.inventory) {
-            if (product.name = name) {
+            if (product.name == nameIn) {
+                
                 return product.toString();
-            } else {return null;}
+            } 
         }
     }
 }
+
+////testing time
+
+//make a story
+
+let longos = new Store();
+
+longos.addProduct(milk);
+longos.addProduct(egg);
+longos.addProduct(bean);
+longos.addProduct(steak);
+longos.addProduct(apple);
+
+console.log("testing the system now...............................");
+
+
+
+console.log("total longos value: " + longos.getInventoryvalue());
+
+Product.applyDiscount(longos.inventory, 0.15);
+
+console.log("longos value after 15% discount: " + longos.getInventoryvalue());
+
+console.log("finding apple");
+
+console.log(longos.findProductByName("apple"));
+
+console.log("finding bingus");
+
+console.log(longos.findProductByName("bingus"));
