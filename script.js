@@ -24,3 +24,13 @@ let apple = new ProductProperties("apple", 2.50, 50);
 
 console.log(apple.getTotalValue());
 console.log(apple.toString());
+
+
+//adding sub class perishable product
+
+class PerishableProductProperties extends ProductProperties {
+    constructor(name, price, quantity, expirationDate) {
+        super(name, price, quantity);
+        this.expirationDate = expirationDate;
+    }
+}
